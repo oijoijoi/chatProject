@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="icomoon/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <div class="sibebar__wrapper" id="sidebarWrapper">
+                
+                <div class="sidebar__userinfo clearfix" onclick="userSettings()">
+                    <div class="sidebar__settings icon-cog"></div>
+                    <span class="sidebar__chatname">SuperPupper Chat</span>
+                    <br>
+                    <span class="sidebar__username" id="sidebarUsername"></span>
+                </div>
+                
+                <div class="roomlist-header"><b>КАНАЛЫ </b><span class="add__button icon-plus" onclick="addNewRoom()"></span></div>
+                <div class="sidebar__roomlist" id="roomList">
+                </div>
+
+
+
+            </div>
+
+            <div id="sidebar-arrow" class="sidebar__arrow" onclick="showSidebar()"></div>
+
+        </div>
+
+        <div class="main">
+            <div class="main__wrapper">
+
+                <div class="main__header">
+                    <span class="main__roomname" id="currentRoom">
+                    </span>
+                    <br>
+                    <span class="main__favorite icon-star-empty" id="favButton">
+                    </span>
+                </div>
+
+                <div class="main__body">
+                    <div class="main__chat-field" id="chat-field"></div>
+                </div>
+
+                <div class="main__footer">
+
+                    <form action="javascript:sendMessage()" class="input-form">
+                        
+                        <div class="input-form__plus icon-plus" id="addButton">
+                        </div>
+
+                        <div class="input-form__text-field">
+                            <input type="text" id="IMess" autocomplete="off" class="input-form__input">
+                        </div>
+
+                        <div class="input-form__send icon-checkmark" onclick="sendMessage()">
+                        </div>
+                        
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+    <script src="ita_chat.js"></script>
+    <script src="user_settings.js"></script>
+    <script src="mini_modals.js"></script>
+</body>
+</html>
