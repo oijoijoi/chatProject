@@ -4,6 +4,9 @@
   "description": "",
   "main": "www/index.html",
   "scripts": {
+    "start": "concurrently \"node app.js\" \"gulp watch\"",
+    "pack": "gulp pack",
+    "start-prod": "gulp pack && PORT=3001 node app.js",
     "html-lint": "gulp html-lint || true"
   },
   "author": "",
@@ -15,6 +18,9 @@
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
-    "concurrently": "3.5.0",    
+    "concurrently": "3.5.0",
+    "gulp": "3.9.1",
+    "gulp-htmlhint": "0.3.1",
+    "gulp-minifier": "0.2.2"
   }
 }
