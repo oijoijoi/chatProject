@@ -3,7 +3,7 @@ var express = require('express'),
   app = express(),
   isProd = typeof(process) !== 'undefined' && process && process.env && process.env.PORT,
   port = isProd ? process.env.PORT : 3000,
-  rootFolder = `${__dirname}/www}`;
+  rootFolder = `${__dirname}/www`;
 
 app.use(express.static(rootFolder));
 app.use(bodyParser.urlencoded({
