@@ -3,10 +3,7 @@ var express = require('express'),
   app = express(),
   isProd = typeof(process) !== 'undefined' && process && process.env && process.env.PORT,
   port = isProd ? process.env.PORT : 3000,
-  rootFolder = `${__dirname}/www/${isProd ? 'release' : 'src'}`;
-
-app.set('view engine', 'ejs');
-app.set('views', './www/src/views');
+  rootFolder = `${__dirname}/www}`;
 
 app.use(express.static(rootFolder));
 app.use(bodyParser.urlencoded({
@@ -22,7 +19,7 @@ app.post('/form', function(req, res){
 });
 
 app.get('/', function(req, res){
-  res.sendFile(`${rootFolder}/Index.html`);
+  res.sendFile(`${rootFolder}/index.html`);
 });
 
 app.get('*', function (req, res) {
