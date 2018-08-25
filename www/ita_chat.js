@@ -1,6 +1,6 @@
 'use strict';
 
-var ajaxHandlerScript="http://fe.it-academy.by/AjaxStringStorage2.php";
+var ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
 var messages; // элемент массива - {name:senderName, avat:avaName, time:date, room:roomName, mess:message};
 var currentChat;
 const password = '1';
