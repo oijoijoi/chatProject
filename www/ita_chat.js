@@ -258,7 +258,7 @@ function dataToCookie() {
 refreshMessages();
 let a = setInterval(function() {
     refreshMessages();
-}, 5000);
+}, 10000);
 
 function exitChat() {
     document.cookie = '';
