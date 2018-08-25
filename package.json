@@ -2,7 +2,7 @@
   "name": "site",
   "version": "1.0.0",
   "description": "",
-  "main": "www/index.html",
+  "main": "app.js",
   "scripts": {
     "start": "concurrently \"node app.js\" \"gulp watch\"",
     "pack": "gulp pack",
